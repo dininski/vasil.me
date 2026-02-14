@@ -32,5 +32,5 @@ jobs:
         env:
           CURRENT_BRANCH: main
           DEPLOYMENT_BRANCH: gh-pages
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_PASS: ${{ secrets.GITHUB_TOKEN }}
           GIT_USER: git
