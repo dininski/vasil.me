@@ -1,19 +1,14 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+engineering:
+  label: Engineering
+  permalink: /engineering
+  description: Software engineering topics
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+performance:
+  label: Performance
+  permalink: /performance
+  description: Performance optimization and profiling
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+systems:
+  label: Systems
+  permalink: /systems
+  description: Systems design and architecture

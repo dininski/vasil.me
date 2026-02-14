@@ -1,43 +1,52 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+function HomePage(): ReactNode {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
+    <div className="container" style={{
+      maxWidth: 640,
+      margin: '0 auto',
+      padding: '4rem 1.5rem',
+    }}>
+      <h1 style={{
+        fontSize: '2.25rem',
+        fontWeight: 700,
+        letterSpacing: '-0.03em',
+        marginBottom: '1.5rem',
+      }}>
+        Hey, I'm Vasil
+      </h1>
+      <p style={{
+        fontSize: '1.15rem',
+        lineHeight: 1.75,
+        color: 'var(--ifm-color-emphasis-700)',
+        marginBottom: '2rem',
+      }}>
+        I'm a software engineer interested in performance, systems design, and
+        building things that work well. I write about what I learn along the way.
+      </p>
+      <div style={{display: 'flex', gap: '1rem'}}>
+        <Link
+          to="/blog"
+          className="button button--primary">
+          Read the blog
+        </Link>
+        <Link
+          href="https://github.com/dininski"
+          className="button button--outline button--secondary">
+          GitHub
+        </Link>
       </div>
-    </header>
+    </div>
   );
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+    <Layout description="Thoughts on software, performance, and engineering">
       <main>
-        <HomepageFeatures />
+        <HomePage />
       </main>
     </Layout>
   );
