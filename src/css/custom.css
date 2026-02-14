@@ -94,47 +94,42 @@ article header h2 a {
   max-width: 960px;
 }
 
-/* Blog post page: wider container to fit 960px article + sidebar */
-.blog-post-page .container {
-  max-width: 1200px;
+/* Blog pages: wider container to fit 960px article + sidebar */
+.blog-wrapper .container {
+  max-width: 1280px;
 }
 
-/* Blog post layout: sidebar to the right */
-.blog-post-page .container > .row {
+/* Blog layout: sidebar to the right */
+.blog-wrapper .container > .row {
   flex-direction: row-reverse;
 }
 
-/* Blog post article: 960px max */
-.blog-post-page .col[class*='col--'] {
-  --ifm-col-width: calc(100% - 250px);
+/* Blog main content column (col--7): fill remaining space, up to 960px */
+.blog-wrapper .container > .row > main {
+  --ifm-col-width: 100%;
   max-width: 960px;
   flex: 1 1 0;
 }
 
-/* Blog post sidebar */
-.blog-post-page aside[class*='col--'] {
+/* Blog sidebar column (col--3): fixed width on the right */
+.blog-wrapper .container > .row > aside {
   --ifm-col-width: 250px;
   flex: 0 0 250px;
   max-width: 250px;
 }
 
-/* Blog list */
-.blog-list-page .container {
-  max-width: 960px;
-}
-
-/* Mobile: stack vertically, sidebar on top (natural order) */
+/* Mobile: stack vertically */
 @media screen and (max-width: 996px) {
-  .blog-post-page .container {
+  .blog-wrapper .container {
     max-width: 100%;
   }
 
-  .blog-post-page .container > .row {
+  .blog-wrapper .container > .row {
     flex-direction: column;
   }
 
-  .blog-post-page .col[class*='col--'],
-  .blog-post-page aside[class*='col--'] {
+  .blog-wrapper .container > .row > main,
+  .blog-wrapper .container > .row > aside {
     --ifm-col-width: 100%;
     flex: 1 1 100%;
     max-width: 100%;
