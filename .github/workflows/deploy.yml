@@ -24,10 +24,14 @@ jobs:
 
       - name: Build and Deploy
         run: |
+          # Configure Git
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          npm run deploy
+          
+          # Build the static site
+          npm run build
+          
+          # Deploy using the GitHub Token for authentication
+          npx gh-pages -d build -t ${{ secrets.GITHUB_TOKEN }}
         env:
-          USE_SSH: false
-          GIT_USER: git
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
