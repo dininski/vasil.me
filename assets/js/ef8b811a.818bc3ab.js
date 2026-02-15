@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkvasil_me=globalThis.webpackChunkvasil_me||[]).push([[947],{6600(s){s.exports=JSON.parse('{"authors":[{"name":"Vasil Dininski","url":"https://vasil.me","socials":{"github":"https://github.com/dininski"},"key":"vasil","page":null,"count":1}]}')}}]);

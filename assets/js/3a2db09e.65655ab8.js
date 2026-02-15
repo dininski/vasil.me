@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkvasil_me=globalThis.webpackChunkvasil_me||[]).push([[121],{8070(e){e.exports=JSON.parse('{"tags":[{"label":"Engineering","permalink":"/blog/tags/engineering","description":"Software engineering topics","count":1}]}')}}]);
